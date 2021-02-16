@@ -1,0 +1,32 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.154.0/containers/docker-existing-dockerfile
+{
+	"name": "Rust on VSCode",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".",
+		"args": {
+			"RUST_VERSION": "1.50.0",
+		},
+		"target": "devcontainer"
+	},
+	"containerUser": "vscode",
+	"remoteUser": "vscode",
+	"updateRemoteUserUID": true,
+	"overrideCommand": false,
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+		"source=${localWorkspaceFolder}/.devcontainer/.extensions,target=/home/vscode/.vscode-server/extensions,type=bind"
+	],
+	"forwardPorts": [],
+	"runArgs": [
+		"--init",
+		"--net=host"
+	],
+	"postStartCommand": "bash -eux .devcontainer/post-start.sh",
+	"extensions": [
+		"rust-lang.rust",
+		"mosapride.zenkaku",
+		"streetsidesoftware.code-spell-checker"
+	]
+}
