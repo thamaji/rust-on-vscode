@@ -6,6 +6,12 @@
     "[rust]": {
         "editor.formatOnSave": true
     },
+    "files.watcherExclude": {
+        "**/target/**": true
+    },
+    "search.exclude": {
+        "**/target/**": true
+    },
     "cSpell.ignorePaths": [
         "**/.git/objects/**",
         ".devcontainer/",

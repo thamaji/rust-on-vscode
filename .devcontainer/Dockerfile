@@ -107,4 +107,4 @@ RUN set -x \
 USER vscode
 
 ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT [ "bash", "-eux", "/entrypoint.sh" ]
+ENTRYPOINT [ "bash", "-eu", "/entrypoint.sh" ]

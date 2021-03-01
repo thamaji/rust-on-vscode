@@ -26,10 +26,11 @@
 	"containerEnv": {
 		"LOCAL_WORKSPACE": "${localWorkspaceFolder}"
 	},
-	"postStartCommand": "bash -eux .devcontainer/post-start.sh",
+	"postCreateCommand": "bash -eux .devcontainer/post-create.sh",
 	"extensions": [
-		"rust-lang.rust",
+		"bungcip.better-toml",
 		"mosapride.zenkaku",
+		"rust-lang.rust",
 		"streetsidesoftware.code-spell-checker"
 	]
 }
