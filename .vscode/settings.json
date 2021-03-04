@@ -1,21 +1,29 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
     "terminal.integrated.allowChords": false,
-    "[rust]": {
-        "editor.formatOnSave": true
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/.devcontainer/.extensions": true,
     },
     "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
         "**/target/**": true
     },
     "search.exclude": {
         "**/target/**": true
     },
+    "files.eol": "\n",
+    "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
     "cSpell.ignorePaths": [
         "**/.git/objects/**",
-        ".devcontainer/",
-        ".vscode/",
+        "**/.devcontainer/**",
+        "**/.vscode/**"
     ],
     "cSpell.words": [
     ]
