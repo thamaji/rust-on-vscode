@@ -11,6 +11,8 @@
         "**/.devcontainer/.extensions": true,
         "**/target/**": true
     },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
     "[rust]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
